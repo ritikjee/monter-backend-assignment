@@ -5,6 +5,7 @@ import path from "path";
 import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./lib/db";
+import authRouter from "./routes/auth.route";
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use(express.json());
 app.get("/", (_, res: Response) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
+
+app.use("/api/auth", authRouter);
 
 (async () => {
   connectDB()
