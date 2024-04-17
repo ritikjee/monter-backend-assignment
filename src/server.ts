@@ -1,5 +1,7 @@
 import express, { Express, Request, Response } from "express";
 
+import path from "path";
+
 import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./lib/db";
@@ -14,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (_, res: Response) => {
-  res.send("HI there");
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 (async () => {
