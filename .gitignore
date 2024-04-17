@@ -1,0 +1,4 @@
+.env
+src/test
+node_modules
+

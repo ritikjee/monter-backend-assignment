@@ -1,0 +1,44 @@
+{
+  "name": "monter-backend",
+  "version": "1.0.0",
+  "description": "This assigment for role of backend developer in monter",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "npx tsc",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritikjee/monter-backend-assignment.git"
+  },
+  "keywords": [
+    "mern",
+    "internship",
+    "express",
+    "nodejs",
+    "jwt"
+  ],
+  "author": "Ritik Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritikjee/monter-backend-assignment/issues"
+  },
+  "homepage": "https://github.com/ritikjee/monter-backend-assignment#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

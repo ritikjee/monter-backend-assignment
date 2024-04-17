@@ -1,0 +1,6 @@
+{
+  "exec": "npx ts-node src/server.ts",
+  "watch": ["src", ".env"],
+  "ext": "ts",
+  "stdin": false
+}
