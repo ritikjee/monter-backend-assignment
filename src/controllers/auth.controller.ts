@@ -52,7 +52,7 @@ export async function verify(req: Request, res: Response) {
 
     const currentTime = new Date();
 
-    const otpTime = new Date(otpExists.createdAt);
+    const otpTime = new Date(otpExists.updatedAt);
 
     const timeDiff = currentTime.getTime() - otpTime.getTime();
 
