@@ -1,11 +1,11 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 
-import path from "path";
-
-import dotenv from "dotenv";
 import cors from "cors";
+import dotenv from "dotenv";
+
 import { connectDB } from "./lib/db";
 import authRouter from "./routes/auth.route";
+import userRouter from "./routes/user.route";
 
 dotenv.config();
 
@@ -16,11 +16,8 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (_, res: Response) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 
 (async () => {
   connectDB()

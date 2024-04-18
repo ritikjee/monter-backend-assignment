@@ -110,7 +110,6 @@ export async function login(req: Request, res: Response) {
 
   try {
     const user = await User.findOne({ email, password });
-    console.log(user);
 
     if (!user) {
       return res.status(400).json({ error: "Invalid credentials" });
