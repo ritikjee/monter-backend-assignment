@@ -1,4 +1,4 @@
-import express, { Express } from "express";
+import express, { Express, Request, Response } from "express";
 
 import cors from "cors";
 import dotenv from "dotenv";
@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 
+app.get("/health", (req: Request, res: Response) => {
+  res.send("I am working fine");
+});
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 
